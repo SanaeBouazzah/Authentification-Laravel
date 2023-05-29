@@ -14,4 +14,12 @@ class StaticController extends Controller
     {
       return view('about');
     }
+    public function customers()
+    {
+      return view('customers');
+    }
+    public function contact()
+    {
+      return view('contact');
+    }
 }
