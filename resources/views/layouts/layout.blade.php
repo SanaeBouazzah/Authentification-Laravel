@@ -12,8 +12,8 @@
       <nav class="flex sm:justify-center space-x-4">
         <a href="{{route('home')}}" class="text-xl font-semibold text-gray-900 dark:text-white">Home</a>
         <a href="{{route('about')}}" class="text-xl font-semibold text-gray-900 dark:text-white">About</a>
-        <a href="/customers" class="text-xl font-semibold text-gray-900 dark:text-white">Customers</a>
-        <a href="/contact" class="text-xl font-semibold text-gray-900 dark:text-white">Contact</a>
+        <a href="{{route('customers')}}" class="text-xl font-semibold text-gray-900 dark:text-white">Customers</a>
+        <a href="{{route('contact')}}" class="text-xl font-semibold text-gray-900 dark:text-white">Contact</a>
       </nav>
 
       @yield('content')
