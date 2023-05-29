@@ -9,13 +9,3 @@ Route::get('/about', [StaticController::class, 'about'])->name('about');
 Route::get('/customers', [StaticController::class, 'customers'])->name('customers');
 Route::get('/contact', [StaticController::class, 'contact'])->name('contact');
 
-
-// Route::get('/about', function () {
-//     return view('about');
-// });
-Route::get('/customers', function () {
-    return view('customers');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
