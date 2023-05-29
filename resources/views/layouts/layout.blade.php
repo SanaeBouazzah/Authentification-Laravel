@@ -13,10 +13,10 @@
     </head>
     <body>
       <nav class="flex sm:justify-center space-x-4">
-        <a href="" class="text-xl font-semibold text-gray-900 dark:text-white">Home</a>
-        <a href="" class="text-xl font-semibold text-gray-900 dark:text-white">About</a>
-        <a href="" class="text-xl font-semibold text-gray-900 dark:text-white">Customers</a>
-        <a href="" class="text-xl font-semibold text-gray-900 dark:text-white">Contact</a>
+        <a href="/" class="text-xl font-semibold text-gray-900 dark:text-white">Home</a>
+        <a href="/about" class="text-xl font-semibold text-gray-900 dark:text-white">About</a>
+        <a href="/customers" class="text-xl font-semibold text-gray-900 dark:text-white">Customers</a>
+        <a href="/contact" class="text-xl font-semibold text-gray-900 dark:text-white">Contact</a>
       </nav>
 
       @yield('content')
