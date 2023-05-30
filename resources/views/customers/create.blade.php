@@ -18,7 +18,10 @@ bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection
       </div>
       <div>
         <label for="password">Password :</label>
-        <input type="text" name="password" id="password">
+        <input type="password" name="password" id="password">
+      </div>
+      <div>
+        <input type="submit" value="Submit">
       </div>
     </form>
    </div>
