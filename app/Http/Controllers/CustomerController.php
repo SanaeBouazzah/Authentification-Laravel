@@ -7,13 +7,6 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    private static function getdata(){
-      return[
-          ['id' => 1, 'name' => 'LG', 'origin' => 'Morocco'],
-          ['id' => 2, 'name' => 'Red', 'origin' => 'Tunis'],
-          ['id' => 3, 'name' => 'Local', 'origin' => 'Belgique'],
-      ];
-    }
     public function index()
     {
       return view('customers.index', [
