@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 
+use function Ramsey\Uuid\v1;
+
 class CustomerController extends Controller
 {
     /**
@@ -13,7 +15,7 @@ class CustomerController extends Controller
     public function index()
     {
       $customers = Customer::all();
-      return view('customers.index')->with('customers', $customers);
+      return view('customers.index', compact('customers'));
     }
 
     /**
@@ -37,7 +39,6 @@ class CustomerController extends Controller
      */
     public function show(string $id)
     {
-        //
     }
 
     /**
