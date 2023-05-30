@@ -37,8 +37,9 @@ class CustomerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Customer $customer)
+    public function show($id)
     {
+      $customer = 
       return view('customers.show', compact('customer'));
     }
 
