@@ -7,19 +7,20 @@
 bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
   <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Create New Customer</h2>
    <div>
-    <form action="">
+    <form action="" class="form bg-white p-6 border-1">
       <div>
-        <label for="name">Name :</label>
-        <input type="text" name="name" id="name">
+        <label for="name" class="text-sm">Name :</label>
+        <input type="text" name="name" id="name" class="text-lg border-1">
       </div>
       <div>
-        <label for="email">Email :</label>
-        <input type="text" name="email" id="email">
+        <label for="origin" class="text-sm">Origin :</label>
+        <input type="text" name="origin" id="origin" class="text-lg border-1">
       </div>
       <div>
-        <label for="password">Password :</label>
-        <input type="password" name="password" id="password">
+        <label for="price" class="text-sm">Price :</label>
+        <input type="text" name="price" id="price" class="text-lg border-1">
       </div>
+      
       <div>
         <input type="submit" value="Submit">
       </div>
