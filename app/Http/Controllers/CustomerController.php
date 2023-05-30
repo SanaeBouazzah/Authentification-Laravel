@@ -35,6 +35,9 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
       $customer = new Customer();
+      $customer->name;
+      $customer->customer;
+      $customer->price;
     }
     public function show(string $id)
     {
