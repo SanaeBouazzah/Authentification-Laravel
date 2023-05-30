@@ -1,7 +1,5 @@
 <?php
- 
 
- use App\Models\Customer;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\StaticController;
 use Illuminate\Support\Facades\Route;
@@ -12,5 +10,5 @@ Route::get('/about', [StaticController::class, 'about'])->name('about');
 Route::get('/contact', [StaticController::class, 'contact'])->name('contact');
 
 
-Route::resource('customers', [CustomerController::class, 'index']);
+Route::get('customers', [CustomerController::class, 'index'])->name('customers.index');
 
