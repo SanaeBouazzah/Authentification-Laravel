@@ -1,1 +1,1 @@
-{{-- {{$customers['id']}} --}}
+{{$customers['id']}}

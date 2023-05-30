@@ -20,7 +20,7 @@
         <td style="border:1px solid #000; padding:20px;">{{$customer->id}}</td>
         <td style="border:1px solid #000; padding:20px;">{{$customer->name}}</td>
         <td style="border:1px solid #000; padding:20px;">{{$customer->details}}</td>
-        <td style="border:1px solid #000; padding:20px;"><a href="">SHOW</a></td>
+        <td style="border:1px solid #000; padding:20px;"><a href="{{route('customers.show', $customer->id)}}">SHOW</a></td>
         {{-- <td style="border:1px solid #000; padding:20px;"><a href="{{route('customers.delete')}}">Delete</a></td> --}}
     @endforeach
   </tr>
