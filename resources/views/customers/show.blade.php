@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('title')
-  Customers
+  Show Customers
 @endsection
 @section('content')
 <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center 
