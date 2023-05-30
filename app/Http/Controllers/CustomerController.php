@@ -13,18 +13,10 @@ class CustomerController extends Controller
         'customers' => Customer::all()
       ]);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('customers.create');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
       $customer = new Customer();
@@ -35,8 +27,12 @@ class CustomerController extends Controller
       $customer->save();
       return redirect()->route('customers.index');
     }
-    public function show(string $id)
+    public function show($customer)
     {
+      Customer::find($customer);
+      return view('customers.show', [
+        'customer' => $customers[$index]
+      ]);
     }
 
     /**
