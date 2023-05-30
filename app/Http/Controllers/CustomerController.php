@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Http\Request;
-
-use function Ramsey\Uuid\v1;
 
 class CustomerController extends Controller
 {
