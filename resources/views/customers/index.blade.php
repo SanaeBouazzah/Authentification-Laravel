@@ -9,11 +9,12 @@ bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection
    @if (count($customers) >0)
    <ul>
       @foreach ($customers as $customer)
-            <li>{{$customer['id']}} <a href="{{route('customers.show')}}">go</a></li>
-            <li>{{$customer['name']}} <a href="{{route('customers.show')}}">go</a></li>
-            <li>{{$customer['origin']}} <a href="{{route('customers.show')}}">go</a></li>
+            <li>{{$customer['id']}}</li>
+            <li>{{$customer['name']}} </li>
+            <li>{{$customer['origin']}} </li>
         @endforeach
       </ul>
+      <a href="{{route('customers.show', ['customer' => $customer])}}">go</a>
    @else
        <p>No DATA Here</p>
    @endif
