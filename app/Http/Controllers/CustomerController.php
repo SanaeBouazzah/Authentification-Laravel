@@ -40,6 +40,7 @@ class CustomerController extends Controller
       $customer->price = $request->input('price');
 
       $customer->save();
+      return redirect()->route('customers.index');
     }
     public function show(string $id)
     {
