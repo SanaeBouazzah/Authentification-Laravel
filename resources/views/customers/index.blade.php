@@ -14,7 +14,7 @@ bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection
             <li>{{$customer['origin']}} </li>
         @endforeach
       </ul>
-      <a href="{{route('customers.show', ['customer' => $customer])}}">go</a>
+      <a href="{{route('customers.show', ['customer' => $customer['id']])}}">go</a>
    @else
        <p>No DATA Here</p>
    @endif

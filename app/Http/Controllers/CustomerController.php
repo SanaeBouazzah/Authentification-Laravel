@@ -35,7 +35,7 @@ class CustomerController extends Controller
     {
         //
     }
-    public function show(string $id)
+    public function show( $id)
     {
         $customers = self::getdata();
         $index = array_search($id, array_column($customers, 'id'));
