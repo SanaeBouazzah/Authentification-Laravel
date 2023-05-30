@@ -30,9 +30,7 @@ class CustomerController extends Controller
     public function show($customer)
     {
       Customer::find($customer);
-      return view('customers.show', [
-        'customer' => $customers[$index]
-      ]);
+      return view('customers.show', ['customer' => $index]);
     }
 
     /**
