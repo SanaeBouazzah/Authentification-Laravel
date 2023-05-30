@@ -7,7 +7,7 @@
 bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
    <div>
     <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Create New Customer</h2>
-    <form action="" class="form bg-white p-6 border-1" method="POST">
+    <form action="{{route('customers.store')}}" class="form bg-white p-6 border-1" method="POST">
       @csrf
       <div>
         <label for="name" class="text-sm">Name :</label>
