@@ -38,6 +38,8 @@ class CustomerController extends Controller
       $customer->name = $request->input('name');
       $customer->origin = $request->input('origin');
       $customer->price = $request->input('price');
+
+      $customer->save();
     }
     public function show(string $id)
     {
