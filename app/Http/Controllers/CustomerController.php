@@ -35,10 +35,10 @@ class CustomerController extends Controller
     {
         //
     }
-    public function show( $id)
+    public function show( $customer)
     {
         $customers = self::getdata();
-        $index = array_search($id, array_column($customers, 'id'));
+        $index = array_search($customer, array_column($customers, 'id'));
         return view('customers.show', [
           'customer' => $customers[$index]
         ]);
