@@ -10,5 +10,5 @@ Route::get('/about', [StaticController::class, 'about'])->name('about');
 Route::get('/contact', [StaticController::class, 'contact'])->name('contact');
 
 
-Route::get('/customers', [CustomerController::class, 'index']);
+Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
 
