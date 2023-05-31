@@ -4,7 +4,7 @@
 @endsection
 @section('content')
 <div class="bg-gray-100 min-h-screen">
-
+  <a href="{{route('customers.create')}}" class="btn btn-primary m-2 px-4">Create</a>
   <div class="p-5">
 <table style="border:1px solid #000;" class="table">
   <thead>

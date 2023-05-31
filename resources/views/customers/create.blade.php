@@ -4,7 +4,7 @@
 @endsection
 @section('content')
 
-<form action="">
+<form action="" class="m-5 bg-light p-4" style="width:30%; margin:auto;">
   @csrf
   <div class="mb-3">
     <label>Name:</label>
