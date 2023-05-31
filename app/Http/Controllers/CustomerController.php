@@ -20,10 +20,11 @@ class CustomerController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
-      $customers = new Customer();
-      $customer->name = $request->name;
+      // $customers = new Customer();
+      // $customer->name = $request->name;
+      return view('customers.create');
     }
 
     /**
