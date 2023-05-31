@@ -30,8 +30,11 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-           $customers = new Customer();
-           $customer->name = $request->name;
+           $name = $request->name;
+           $details = $request->details;
+
+          //  2 actions necessary: validation et insertion
+          // 1 validation
     }
 
     /**
