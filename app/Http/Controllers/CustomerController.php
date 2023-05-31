@@ -35,6 +35,7 @@ class CustomerController extends Controller
 
           //  2 actions necessary: validation et insertion
           // 1 validation
+          $request->validate();
     }
 
     /**
