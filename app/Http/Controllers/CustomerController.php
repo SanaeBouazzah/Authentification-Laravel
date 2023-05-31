@@ -30,8 +30,8 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-          //  $name = $request->name;
-          //  $details = $request->details;
+           $name = $request->name;
+           $details = $request->details;
 
           //  2 actions necessary: validation et insertion
           // 1 validation
@@ -41,7 +41,10 @@ class CustomerController extends Controller
           ]);
 
           // 2 insertion
-          Customer::create($request->post());
+          Customer::create([
+            'name' => $name,
+            'details' => $details
+          ]);
 
           return redirect()->route('customers.index');
     }
