@@ -6,24 +6,25 @@
 <div class="bg-gray-100 min-h-screen">
   <a href="{{route('customers.create')}}" class="btn btn-primary m-2 px-4">Create</a>
   <div class="p-5">
-<table style="border:1px solid #000;" class="table">
+<table class="table" style="border:1px solid #000;">
   <thead>
-  <tr >
-    <td style="border:1px solid #000; padding:20px;">Name:</td>
-    <td style="border:1px solid #000; padding:20px;">Details</td>
-    <td style="border:1px solid #000; padding:20px;">ID:</td>
+  <tr style="border:1px solid #000;">
+    <td>ID</td>
+    <td>Name</td>
+    <td>Details</td>
+    <td>Buttons</td>
   </tr>
 </thead>
 <tbody>
-  <tr>
     @foreach ($customers as $value)
-        <td style="border:1px solid #000; padding:20px;">{{$value->id}}</td>
-        <td style="border:1px solid #000; padding:20px;">{{$value->name}}</td>
-        <td style="border:1px solid #000; padding:20px;">{{$value['details']}}</td>
-        <td style="border:1px solid #000; padding:20px;"><a href="{{route('customers.show', $value->id)}}">SHOW</a></td>
+    <tr>
+        <td>{{$value->id}}</td>
+        <td>{{$value->name}}</td>
+        <td>{{$value['details']}}</td>
+        <td><a href="{{route('customers.show', $value->id)}}">SHOW</a></td>
         {{-- <td style="border:1px solid #000; padding:20px;"><a href="{{route('customers.delete')}}">Delete</a></td> --}}
+    </tr>  
     @endforeach
-  </tr>
   </tbody>
 </table>
 </div>
