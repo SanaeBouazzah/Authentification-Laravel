@@ -8,11 +8,11 @@
   @csrf
   <div class="mb-3">
     <label>Name:</label>
-     <input type="text" name="name" class="form-control" value="{{old('name')}}">
+     <input type="text" name="name" class="form-control">
    </div>
    <div class="mb-3">
     <label>details:</label>
-     <input type="text" name="email" class="form-control" value="{{old('email')}}">
+     <input type="text" name="details" class="form-control">
    </div>
    <div class="d-grid">
      <button class="btn btn-primary btn-block my-2">Ajouter</button>

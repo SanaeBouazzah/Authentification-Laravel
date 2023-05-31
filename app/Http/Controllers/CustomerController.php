@@ -46,7 +46,7 @@ class CustomerController extends Controller
             'details' => $details
           ]);
 
-          return redirect()->to_route('home');
+          return redirect()->route('customers.index');
     }
 
     /**
