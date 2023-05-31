@@ -39,6 +39,9 @@ class CustomerController extends Controller
             'name' => 'required',
             'details' => 'required',
           ]);
+
+          // 2 insertion
+          Customer::create();
     }
 
     /**
