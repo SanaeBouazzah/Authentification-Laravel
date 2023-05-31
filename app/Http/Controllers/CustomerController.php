@@ -22,8 +22,6 @@ class CustomerController extends Controller
      */
     public function create()
     {
-      // $customers = new Customer();
-      // $customer->name = $request->name;
       return view('customers.create');
     }
 
@@ -32,7 +30,8 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+           $customers = new Customer();
+           $customer->name = $request->name;
     }
 
     /**
