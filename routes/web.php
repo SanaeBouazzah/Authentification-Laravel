@@ -11,7 +11,7 @@ Route::get('/contact', [StaticController::class, 'contact'])->name('contact');
 
 
 Route::get('customers', [CustomerController::class, 'index'])->name('customers.index');
-Route::get('customers/{id}', [CustomerController::class, 'show'])->name('customers.show');
+Route::post('customers/{id}', [CustomerController::class, 'show'])->name('customers.show');
 // Route::get('customers/create', [CustomerController::class, 'create'])->name('customers.create');
 // Route::get('customers', [CustomerController::class, 'destroy'])->name('customers.delete');
 

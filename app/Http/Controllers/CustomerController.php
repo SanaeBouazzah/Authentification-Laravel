@@ -23,6 +23,7 @@ class CustomerController extends Controller
     public function create(Request $request)
     {
       $customers = new Customer();
+      $customer->name = $request->name;
     }
 
     /**
