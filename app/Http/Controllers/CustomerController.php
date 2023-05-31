@@ -41,7 +41,10 @@ class CustomerController extends Controller
           ]);
 
           // 2 insertion
-          Customer::create();
+          Customer::create([
+            'name' => $name,
+            'details' => $details
+          ]);
     }
 
     /**
