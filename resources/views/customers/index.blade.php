@@ -57,7 +57,6 @@
         <td>{{$value->name}}</td>
         <td>{{$value['details']}}</td>
         <td><a href="{{route('customers.show', $value->id)}}">SHOW</a></td>
-        <td style="border:1px solid #000; padding:20px;"><a href="{{route('customers.destroy', $value->id)}}">Delete</a></td>
     </tr>  
     @endforeach
   </tbody>
