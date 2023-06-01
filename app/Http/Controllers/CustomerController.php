@@ -50,10 +50,10 @@ class CustomerController extends Controller
     {
         //
     }
-    public function destroy(string $id)
+    public function destroy($id)
     {
         $customers = Customer::find($id);
         $customers->delete();
-        return redirect()->route('customers.index', compact('customers'));
+        return view('customers.index', compact('customers'));
     }
 }
