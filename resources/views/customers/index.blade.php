@@ -56,8 +56,8 @@
         <td>{{$value->id}}</td>
         <td>{{$value->name}}</td>
         <td>{{$value['details']}}</td>
-        <td><a href="{{route('customers.show', $value->id)}}">SHOW</a></td>
         <td>
+          <a href="{{route('customers.show', $value->id)}}">SHOW</a>
           <form action="{{route('customers.destroy', $value->id)}}" method="POST">
             @csrf
             @method('delete')
