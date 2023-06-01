@@ -41,9 +41,6 @@
 
 
   <div class="p-5">
-    @if (!is_array($customers) && !is_iterable($customers))
-    <p>No customers found.</p>
-@else
     <table class="table" style="border:1px solid #000;">
         <thead>
             <tr>
@@ -71,7 +68,6 @@
             @endforeach
         </tbody>
     </table>
-@endif
 </div>
 
 
