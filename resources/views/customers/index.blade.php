@@ -57,11 +57,11 @@
                     <td>{{ $value->name }}</td>
                     <td>{{ $value['details'] }}</td>
                     <td class="flex">
-                        <a href="{{ route('customers.show', $value->id) }}">SHOW</a>
+                        <a href="{{ route('customers.show', $value->id) }}" class="btn btn-primary">SHOW</a>
                         <form action="{{ route('customers.destroy', $value->id) }}" method="POST">
                             @csrf
                             @method('delete')
-                            <input type="submit" value="Delete">
+                            <input type="submit" value="Delete" class="btn btn-primary">
                         </form>
                     </td>
                 </tr>
