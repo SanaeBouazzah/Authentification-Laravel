@@ -54,6 +54,6 @@ class CustomerController extends Controller
     {
         $customers = Customer::all();
         $customer->delete();
-        return view('home', compact('customers'));
+        return redirect()->route('customers.index', compact('customers'));
     }
 }
