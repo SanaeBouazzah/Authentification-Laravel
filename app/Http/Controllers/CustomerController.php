@@ -53,6 +53,7 @@ class CustomerController extends Controller
     public function destroy(string $id)
     {
         $customers = Customer::find($id);
+        $customers->delete();
         return redirect()->route('customers.inex', compact('customers'));
     }
 }
