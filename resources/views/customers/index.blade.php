@@ -57,6 +57,11 @@
         <td>{{$value->name}}</td>
         <td>{{$value['details']}}</td>
         <td><a href="{{route('customers.show', $value->id)}}">SHOW</a></td>
+        <form action="{{route('')}}" method="POST">
+          @csrf
+          @method('delete')
+          <input type="submit" value="Delete">
+        </form>
     </tr>  
     @endforeach
   </tbody>
