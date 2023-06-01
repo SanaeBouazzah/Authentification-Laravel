@@ -5,7 +5,6 @@
 @section('content')
 <div class="bg-gray-100 min-h-screen">
   {{-- <a href="{{route('customers.create')}}" class="btn btn-primary m-2 px-4">Create</a> --}}
- <!-- Button trigger modal -->
  <button type="button" class="btn btn-primary m-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Add Customer
 </button>
@@ -58,7 +57,7 @@
         <td>{{$value->name}}</td>
         <td>{{$value['details']}}</td>
         <td><a href="{{route('customers.show', $value->id)}}">SHOW</a></td>
-        {{-- <td style="border:1px solid #000; padding:20px;"><a href="{{route('customers.delete')}}">Delete</a></td> --}}
+        <td style="border:1px solid #000; padding:20px;"><a href="{{route('customers.delete',)}}">Delete</a></td>
     </tr>  
     @endforeach
   </tbody>
