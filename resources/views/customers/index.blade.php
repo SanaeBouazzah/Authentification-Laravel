@@ -57,7 +57,7 @@
                     <td>{{ $value->name }}</td>
                     <td>{{ $value['details'] }}</td>
                     <td class="flex">
-                        <a href="{{ route('customers.show', $value->id) }}" class="btn btn-primary">SHOW</a>
+                        <a href="{{ route('customers.show', $value->id) }}" class="btn btn-primary py-3 px-4">Show</a>
                         <form action="{{ route('customers.destroy', $value->id) }}" method="POST">
                             @csrf
                             @method('delete')
