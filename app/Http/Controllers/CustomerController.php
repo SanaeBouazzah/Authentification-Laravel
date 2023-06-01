@@ -8,18 +8,11 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
       $customers = Customer::all();
       return view('customers.index', compact('customers'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
     }
@@ -59,7 +52,7 @@ class CustomerController extends Controller
     }
     public function destroy(string $id)
     {
-        $customer->delete();
+        $customers = Customer::all();
         return redirect()->route('customers.inex', compact('customer'));
     }
 }
