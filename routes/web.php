@@ -16,6 +16,6 @@ Route::post('/customers/store', [CustomerController::class, 'store'])->name('cus
 
 
 
-Route::delete('customers/{id}', [CustomerController::class, 'destroy'])->name('customers.destroy');
+Route::delete('customers/{customer}', [CustomerController::class, 'destroy'])->name('customers.destroy');
 Route::get('customers/{id}', [CustomerController::class, 'show'])->name('customers.show');
 
