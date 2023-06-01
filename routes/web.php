@@ -15,5 +15,5 @@ Route::get('/customers/create', [CustomerController::class, 'create'])->name('cu
 Route::post('/customers/store', [CustomerController::class, 'store'])->name('customers.store');
 Route::get('customers/{id}', [CustomerController::class, 'show'])->name('customers.show');
 
-// Route::get('customers', [CustomerController::class, 'destroy'])->name('customers.delete');
+Route::get('customers', [CustomerController::class, 'destroy'])->name('customers.destroy');
 

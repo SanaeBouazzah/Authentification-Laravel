@@ -54,6 +54,6 @@ class CustomerController extends Controller
     {
         $customers = Customer::find($id);
         $customers->delete();
-        return redirect()->route('customers.inex', compact('customers'));
+        return redirect()->route('customers.index', compact('customers'));
     }
 }
