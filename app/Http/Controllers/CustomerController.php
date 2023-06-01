@@ -53,6 +53,6 @@ class CustomerController extends Controller
     public function destroy(string $id)
     {
         $customers = Customer::all();
-        return redirect()->route('customers.inex', compact('customer'));
+        return redirect()->route('customers.inex', compact('customers'));
     }
 }
