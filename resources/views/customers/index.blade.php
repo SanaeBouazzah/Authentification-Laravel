@@ -41,33 +41,37 @@
 
 
   <div class="p-5">
-<table class="table" style="border:1px solid #000;">
-  <thead>
-  <tr style="border:1px solid #000;">
-    <td>ID</td>
-    <td>Name</td>
-    <td>Details</td>
-    <td>Buttons</td>
-  </tr>
-</thead>
-<tbody>
-    @foreach ($customers as $value)
-    <tr>
-        <td>{{$value->id}}</td>
-        <td>{{$value->name}}</td>
-        <td>{{$value['details']}}</td>
-        <td>
-          <a href="{{route('customers.show', $value->id)}}">SHOW</a>
-          <form action="{{route('customers.destroy', $value->id)}}" method="POST">
-            @csrf
-            @method('delete')
-            <input type="submit" value="Delete">
-          </form>
-        </td>
-    </tr>  
-    @endforeach
-  </tbody>
-</table>
+    @if (!is_array($customers) && !is_iterable($customers))
+    <p>No customers found.</p>
+@else
+    <table class="table" style="border:1px solid #000;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Details</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($customers as $value)
+                <tr>
+                    <td>{{ $value->id }}</td>
+                    <td>{{ $value->name }}</td>
+                    <td>{{ $value['details'] }}</td>
+                    <td>
+                        <a href="{{ route('customers.show', $value->id) }}">SHOW</a>
+                        <form action="{{ route('customers.destroy', $value->id) }}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+@endif
 </div>
 
 
