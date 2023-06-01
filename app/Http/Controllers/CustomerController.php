@@ -52,8 +52,8 @@ class CustomerController extends Controller
     }
     public function destroy($id)
     {
-        $customers = Customer::find($id);
-        $customers->delete();
-        return view('customers.index', compact('customers'));
+        $customer = Customer::find($id);
+        $customer->delete();
+        return view('customers.index', compact('customer'));
     }
 }
