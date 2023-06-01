@@ -57,13 +57,11 @@
         <td>{{$value->name}}</td>
         <td>{{$value['details']}}</td>
         <td><a href="{{route('customers.show', $value->id)}}">SHOW</a></td>
-        <td>
-          <form action="{{route('customers.destroy', $value->id)}}" method="POST">
-            @csrf
-            @method('delete')
-            <input type="submit" value="Delete">
-          </form>
-        </td>
+        <form action="{{route('customers.destroy', $value->id)}}" method="POST">
+          @csrf
+          @method('delete')
+          <input type="submit" value="Delete">
+        </form>
     </tr>  
     @endforeach
   </tbody>
