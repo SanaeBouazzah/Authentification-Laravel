@@ -56,13 +56,12 @@
                     <td>{{ $value->id }}</td>
                     <td>{{ $value->name }}</td>
                     <td>{{ $value['details'] }}</td>
-                    <td class="flex" style="margin:0 10px;">
-                        <a href="{{ route('customers.show', $value->id) }}" class="btn btn-primary py-3 px-4"
-                           style="display:block;">Show</a>
+                    <td class="d-flex flex-row" style="margin:0 10px;">
+                        <a href="{{ route('customers.show', $value->id) }}" class="btn btn-primary px-4 p-2">Show</a>
                         <form action="{{ route('customers.destroy', $value->id) }}" method="POST">
                             @csrf
                             @method('delete')
-                            <input type="submit" value="Delete" class="btn btn-primary py-3 px-4">
+                            <input type="submit" value="Delete" class="btn btn-primary p-2 px-4">
                         </form>
                     </td>
                 </tr>
