@@ -17,6 +17,6 @@ Route::post('/customers/store', [CustomerController::class, 'store'])->name('cus
 
 
 Route::delete('customers/{customer}', [CustomerController::class, 'destroy'])->name('customers.destroy');
-Route::get('customers/update', [CustomerController::class, 'update'])->name('customers.update');
+Route::get('customers/update/{id}', [CustomerController::class, 'update'])->name('customers.update');
 Route::get('customers/{id}', [CustomerController::class, 'show'])->name('customers.show');
 
