@@ -14,10 +14,9 @@
     <label>details:</label>
      <input type="text" name="details" class="form-control">
    </div>
-   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-    <input type="submit" class="btn btn-primary" value="Add Customer">
-  </div>
+   <div>
+    <input type="submit" value="Save Changes">
+   </div>
  </form>
 
 </div>
