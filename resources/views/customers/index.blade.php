@@ -25,9 +25,11 @@
            <div class="mb-3">
             <label>details:</label>
              <input type="text" name="details" class="form-control">
-             @error('details')
+             <span class="text-danger">
+              @error('details')
                  {{$message}}
              @enderror
+             </span>
            </div>
            <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
