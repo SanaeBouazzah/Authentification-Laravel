@@ -15,7 +15,7 @@
      <input type="text" name="details" class="form-control">
    </div>
    <div>
-    <input type="submit" value="Save Changes">
+    <input type="submit" value="Save Changes" class="form-control btn btn-dark">
    </div>
  </form>
 
