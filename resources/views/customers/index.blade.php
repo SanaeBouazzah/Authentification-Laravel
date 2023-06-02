@@ -18,9 +18,11 @@
           <div class="mb-3">
             <label>Name:</label>
              <input type="text" name="name" class="form-control">
-             @error('name')
+             <span class="text-danger">
+              @error('name')
                  {{$message}}
              @enderror
+             </span>
            </div>
            <div class="mb-3">
             <label>details:</label>
