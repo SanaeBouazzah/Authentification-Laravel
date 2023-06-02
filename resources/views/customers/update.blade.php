@@ -1,3 +1,9 @@
+@extends('layouts.layout')
+@section('title')
+  Customers
+@endsection
+@section('content')
+<div class="bg-gray-100 min-h-screen">
 <form action="{{route('customers.store')}}" class="bg-light p-4" method="POST">
   @csrf
   <div class="mb-3">
@@ -13,3 +19,6 @@
     <input type="submit" class="btn btn-primary" value="Add Customer">
   </div>
  </form>
+
+</div>
+@endsection
