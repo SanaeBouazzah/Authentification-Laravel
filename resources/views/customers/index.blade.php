@@ -58,7 +58,7 @@
                     <td>{{ $value['details'] }}</td>
                     <td class="d-flex flex-row" style="margin:0 10px;">
                         <a href="{{ route('customers.show', $value->id) }}" class="mx-4 p-2">Show</a>
-                        <a href="{{route('customers.update')}}" class="mx-4 p-2>Update</a>
+                        <a href="{{route('customers.update')}}" class="mx-4 p-2">Update</a>
                         <form action="{{route('customers.destroy',$value->id)}}" method="POST">
                             @csrf
                             @method('delete')

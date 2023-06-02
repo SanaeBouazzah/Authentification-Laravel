@@ -48,7 +48,7 @@ class CustomerController extends Controller
     }
     public function update(Request $request, string $id)
     {
-        //
+      return view('customers.update');
     }
     public function destroy(Customer $customer)
     {
