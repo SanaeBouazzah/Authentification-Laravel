@@ -15,6 +15,7 @@ class CustomerController extends Controller
     }
     public function create()
     {
+      //
     }
     public function store(Request $request)
     {
@@ -42,13 +43,20 @@ class CustomerController extends Controller
       $customer = Customer::find($id);
       return view('customers.show', compact('customer'));
     }
-    public function edit(string $id)
+    public function edit( $id)
     {
-        //
+      $customers = Customer::find($id);
+      return view('customers.edit', compact('customers'));
     }
-    public function update()
+    public function update(Request $request, Customer $customer)
     {
-      return view('customers.update');
+
+     $formfiedls = $request->validate([
+       'name' => 'required',
+       'details' => 'required',
+     ]);
+     $customer->fill($formfiedls)->save();
+     return redirect()->route('customers.index');
     }
     public function destroy(Customer $customer)
     {

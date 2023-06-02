@@ -4,12 +4,7 @@
 @endsection
 @section('content')
 <div class="bg-gray-100 min-h-screen">
-  {{-- <a href="{{route('customers.create')}}" class="btn btn-primary m-2 px-4">Create</a> --}}
- <button type="button" class="btn btn-primary m-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add Customer
-</button>
 
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -30,7 +25,7 @@
            </div>
            <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <input type="submit" class="btn btn-primary" value="Add Customer">
+            <input type="submit" class="btn btn-dark" value="Add Customer">
           </div>
          </form>
       </div>
@@ -39,45 +34,44 @@
 </div>
 
 
-
-  <div class="p-5">
-    <table class="table" style="border:1px solid #000;">
-        <thead>
+<div class="container">
+  <div class=" my-4">
+    <table class="table rounded shadow-lg ">
+        <thead class="bg-dark">
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Details</th>
-                <th>Actions</th>
+                <th class="text-white p-4">ID</th>
+                <th class="text-white p-4">Name</th>
+                <th class="text-white p-4">Details</th>
+                <th class="text-white p-4 text-center">Actions</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($customers as $value)
                 <tr>
-                    <td>{{ $value->id }}</td>
+                    <td class="px-4">{{ $value->id }}</td>
                     <td>{{ $value->name }}</td>
                     <td>{{ $value['details'] }}</td>
-                    <td class="d-flex flex-row" style="margin:0 10px;">
-                        <a href="{{ route('customers.show', $value->id) }}" class="mx-4 p-2">Show</a>
-                        <a href="{{route('customers.update')}}" class="mx-4 p-2">Update</a>
+                    <td class="d-flex justify-content-center">
+                        <a href="{{ route('customers.show', $value->id) }}" class="mx-4 text-secondary">Show</a>
+                        <a href="{{route('customers.edit',$value->id)}}" class="mx-4 text-secondary">Edit</a>
                         <form action="{{route('customers.destroy',$value->id)}}" method="POST">
                             @csrf
                             @method('delete')
-                            <input type="submit" value="Delete" class="btn btn-primary p-2 px-5 mx-4">
+                            <input type="submit" value="Delete" class="btn btn-dark px-5 mx-4">
                         </form>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+    
 </div>
 
 
-
-
-
-
-
-
+<button type="button" class="btn btn-dark m-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add Customer
+</button>
+</div>
 </div>
 @endsection
 

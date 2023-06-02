@@ -11,11 +11,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     </head>
     <body>
-      <nav class="flex sm:justify-center space-x-4">
-        <a href="{{route('home')}}" class="text-xl font-semibold text-gray-900 dark:text-white">Home</a>
-        <a href="{{route('about')}}" class="text-xl font-semibold text-gray-900 dark:text-white">About</a>
-        <a href="{{route('customers.index')}}" class="text-xl font-semibold text-gray-900 dark:text-white">Customers</a>
-        <a href="{{route('contact')}}" class="text-xl font-semibold text-gray-900 dark:text-white">Contact</a>
+      <nav class="bg-dark py-2 d-flex justify-content-center">
+        <a href="{{route('home')}}" class="text-white">Home</a>
+        <a href="{{route('about')}}" class="text-white">About</a>
+        <a href="{{route('customers.index')}}" class="text-white">Customers</a>
+        <a href="{{route('contact')}}" class="text-white">Contact</a>
       </nav>
 
       @yield('content')
