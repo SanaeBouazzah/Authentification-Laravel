@@ -18,6 +18,9 @@
           <div class="mb-3">
             <label>Name:</label>
              <input type="text" name="name" class="form-control">
+             @error('name')
+                 {{$message}}
+             @enderror
            </div>
            <div class="mb-3">
             <label>details:</label>
