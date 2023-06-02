@@ -3,8 +3,8 @@
   Customers
 @endsection
 @section('content')
-<div class="bg-gray-100 min-h-screen">
-<form action="{{route('customers.store')}}" class="bg-light p-4" method="POST">
+<div class="bg-gray-100 min-h-screen pt-5">
+<form action="{{route('customers.store')}}" class="bg-light p-5 shadow-lg" method="POST" style="width:35%; margin:auto;">
   @csrf
   <div class="mb-3">
     <label>Name:</label>
