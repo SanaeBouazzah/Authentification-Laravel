@@ -19,7 +19,7 @@ class CustomerController extends Controller
     }
     public function store(Request $request)
     {
-           $name = $request->name;
+           $name = strip_tags($request->name);
            $details = $request->details;
 
           //  2 actions necessary: validation et insertion
