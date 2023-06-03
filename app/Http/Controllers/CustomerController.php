@@ -59,7 +59,7 @@ class CustomerController extends Controller
     }
     public function destroy(Customer $customer)
     {
-        $customers = Customer::all();
+        $customers = Customer::findOrFail($customer);
         $customer->delete();
         return redirect()->route('customers.index', compact('customers'));
     }
