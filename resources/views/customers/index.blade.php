@@ -81,9 +81,10 @@
 <button type="button" class="btn btn-dark m-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Add Customer
 </button>
-</div>
-</div>
 {{ $customers->links() }}
+</div>
+</div>
+
 @endsection
 
 <script>
