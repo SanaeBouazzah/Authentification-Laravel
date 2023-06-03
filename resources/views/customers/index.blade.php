@@ -83,6 +83,7 @@
 </button>
 </div>
 </div>
+{{ $customers->links() }}
 @endsection
 
 <script>
