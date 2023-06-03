@@ -26,7 +26,7 @@
            </div>
            <div class="mb-3">
             <label>details:</label>
-             <input type="text" name="details" class="form-control" value="{{ols('details')}}">
+             <input type="text" name="details" class="form-control" value="{{old('details')}}">
              <span class="text-danger">
               @error('details')
                  {{$message}}
