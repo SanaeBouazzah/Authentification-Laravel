@@ -20,23 +20,23 @@ class CustomerController extends Controller
     {
            $name = strip_tags($request->name);
            $details = strip_tags($request->details);
-           $image = $request->file('image')->store('public/images');
 
           //  2 actions necessary: validation et insertion
           // 1 validation
           $request->validate([
             'name' => 'required',
             'details' => 'required',
-            'image' => 'required | mimes: jpg, png, jpeg'
+            'image' => 'required|image|mimes: jpg, png, jpeg'
           ]);
 
           // 2 insertion
+          $image = $request->file('image')->store('public/images');
           Customer::create([
             'name' => $name,
             'details' => $details,
             'image' => $image,
           ]);
-          
+           
 
           return redirect()->route('customers.index');
     }
