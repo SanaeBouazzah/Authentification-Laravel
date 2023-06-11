@@ -37,7 +37,7 @@ class CustomerController extends Controller
           'image' => $image,
         ]);
            
-          return redirect()->route('customers.index');
+          return redirect()->route('customers.index')->with('success', 'you have added a customer successfully.');
     }
     public function show($id)
     {
