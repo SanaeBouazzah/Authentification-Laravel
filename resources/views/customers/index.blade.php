@@ -33,6 +33,15 @@
              @enderror
              </span>
            </div>
+           <div class="mb-3">
+            <label>details:</label>
+             <input type="file" name="details" class="form-control" value="{{old('details')}}">
+             <span class="text-danger">
+              @error('details')
+                 {{$message}}
+             @enderror
+             </span>
+           </div>
            <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <input type="submit" class="btn btn-dark" value="Add Customer">
