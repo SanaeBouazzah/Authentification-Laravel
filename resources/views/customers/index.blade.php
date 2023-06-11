@@ -35,9 +35,9 @@
            </div>
            <div class="mb-3">
             <label>details:</label>
-             <input type="file" name="details" class="form-control" value="{{old('details')}}">
+             <input type="file" name="image" class="form-control" value="{{old('image')}}">
              <span class="text-danger">
-              @error('details')
+              @error('image')
                  {{$message}}
              @enderror
              </span>
