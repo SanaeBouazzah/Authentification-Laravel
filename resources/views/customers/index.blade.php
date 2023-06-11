@@ -54,6 +54,11 @@
 
 
 <div class="container">
+  <div>
+    @if (session()->has('success'))
+        {{session('success')}}
+    @endif
+  </div>
   <div class=" my-4">
     <table class="table rounded shadow-lg ">
         <thead class="bg-dark">
