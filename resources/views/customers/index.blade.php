@@ -34,7 +34,7 @@
              </span>
            </div>
            <div class="mb-3">
-            <label>details:</label>
+            <label>Image:</label>
              <input type="file" name="image" class="form-control" value="{{old('image')}}">
              <span class="text-danger">
               @error('image')
