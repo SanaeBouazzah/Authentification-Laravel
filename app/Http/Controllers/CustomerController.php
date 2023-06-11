@@ -58,7 +58,7 @@ class CustomerController extends Controller
        'image' => 'required'
      ]);
      $image = $request->file('image');
-     if($image !== NULL){
+     if($request->hasFile('image')){
 
      }
      $formfiedls['image'] = $image->store('images', 'public');
