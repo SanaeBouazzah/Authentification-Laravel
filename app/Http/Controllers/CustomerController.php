@@ -26,6 +26,7 @@ class CustomerController extends Controller
           $request->validate([
             'name' => 'required',
             'details' => 'required',
+            'image' => 'required | mimes: jpg, png, jpeg'
           ]);
 
           // 2 insertion
