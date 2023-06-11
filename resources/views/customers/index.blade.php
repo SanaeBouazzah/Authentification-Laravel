@@ -69,7 +69,7 @@
             @foreach ($customers as $value)
                 <tr>
                     <td class="px-4">{{ $value->id }}</td>
-                    <td><img src="/public/images/{{$value->image}}" alt="image" width="90px" height="90px"></td>
+                    <td><img src="/images/{{$value->image}}" alt="image" width="90px" height="90px"></td>
                     <td>{{ $value->name }}</td>
                     <td>{{ $value['details'] }}</td>
                     <td class="d-flex justify-content-center">
