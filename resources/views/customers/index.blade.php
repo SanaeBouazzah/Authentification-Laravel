@@ -59,6 +59,7 @@
         <thead class="bg-dark">
             <tr>
                 <th class="text-white p-4">ID</th>
+                <th class="text-white p-4">image</th>
                 <th class="text-white p-4">Name</th>
                 <th class="text-white p-4">Details</th>
                 <th class="text-white p-4 text-center">Actions</th>
