@@ -20,7 +20,6 @@ class CustomerController extends Controller
     {
            $name = strip_tags($request->name);
            $details = strip_tags($request->details);
-           $image = $request->image;
 
           //  2 actions necessary: validation et insertion
           // 1 validation
@@ -31,24 +30,13 @@ class CustomerController extends Controller
           ]);
 
           // 2 insertion
-          Customer::create([
-            'name' => $name,
-            'details' => $details,
-            'image' => $image,
-          ]);
-          if($request->image){
-            $ext = $request->image->getClientOriginalExtension();
-            $newFileName = time().'.'.$ext;
-            $request->image->move(public_path().'/public/images/', $newFileName);
-            $employee->image =  $newFileName;
-            $employee->save();
-          return redirect()->route('customers.index')->with('success', 'Employee added successfuly!!');
-          }else{
-          // return with errors
-          return redirect()->route('customers.create')->withErrors($validator)->withInput();
-        }
+          $image = $request->file('image')->store('images', 'public');
+        Customer::create([
+          'name' => $name,
+          'details' => $details,
+          'image' => $image,
+        ]);
            
-
           // return redirect()->route('customers.index');
     }
     public function show($id)
