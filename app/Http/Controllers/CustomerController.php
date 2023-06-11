@@ -26,18 +26,18 @@ class CustomerController extends Controller
           $request->validate([
             'name' => 'required',
             'details' => 'required',
-            'image' => 'required|image|mimes: jpg, png, jpeg'
+            'image' => 'required|image'
           ]);
 
           // 2 insertion
-          $image['image'] = $request->file('image')->store('images', 'public');
+          $image = $request->file('image')->store('images', 'public');
         Customer::create([
           'name' => $name,
           'details' => $details,
           'image' => $image,
         ]);
            
-          // return redirect()->route('customers.index');
+          return redirect()->route('customers.index');
     }
     public function show($id)
     {
