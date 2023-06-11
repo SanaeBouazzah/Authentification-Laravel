@@ -69,7 +69,7 @@
             @foreach ($customers as $value)
                 <tr>
                     <td class="px-4">{{ $value->id }}</td>
-                    <td><img src="{{asset('$value->image')}}" alt="image" width="50px" height="50px" style="object-fit:cover;border-radius:50%;"></td>
+                    <td><img src="{{asset('storage/'. $value->image)}}" alt="image" width="50px" height="50px" style="object-fit:cover;border-radius:50%;"></td>
                     <td>{{ $value->name }}</td>
                     <td>{{ $value['details'] }}</td>
                     <td class="d-flex justify-content-center">
