@@ -30,7 +30,7 @@ class CustomerController extends Controller
           ]);
 
           // 2 insertion
-          $image = $request->file('image')->store('images', 'public');
+          $image['image'] = $request->file('image')->store('images', 'public');
         Customer::create([
           'name' => $name,
           'details' => $details,
