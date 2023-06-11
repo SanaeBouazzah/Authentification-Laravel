@@ -51,16 +51,19 @@ class CustomerController extends Controller
     }
     public function update(Request $request, Customer $customer)
     {
-     $formfields = $request->validate([
-       'name' => 'required',
-       'details' => 'required',
-       'image' => 'required'
-     ]);
-     if($request->hasFile('image')){
-      $formfields['image'] = $request->file('image')->store('images', 'public');
-     }
-     $customer->fill($formfields)->save();
-     return redirect()->route('customers.index')->with('success', 'you have been updated customer successfully.');
+      $formfields = $request->validate([
+        'name' => 'required',
+        'details' => 'required',
+        'image' => 'required | image'
+    ]);
+
+    if ($request->hasFile('image')) {
+        $formfields['image'] = $request->file('image')->store('images', 'public');
+    }
+
+    $customer->fill($formfields)->save();
+
+    return redirect()->route('customers.index')->with('success', 'You have updated the customer successfully.');
     }
     public function destroy(Customer $customer)
     {
