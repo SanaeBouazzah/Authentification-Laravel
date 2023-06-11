@@ -33,7 +33,8 @@ class CustomerController extends Controller
           // 2 insertion
           Customer::create([
             'name' => $name,
-            'details' => $details
+            'details' => $details,
+            'image' => $image,
           ]);
           
 
