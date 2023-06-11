@@ -57,11 +57,9 @@ class CustomerController extends Controller
        'details' => 'required',
        'image' => 'required'
      ]);
-     $image = $request->file('image');
      if($request->hasFile('image')){
-
+      $formfiedls['image'] = $request->file('image')->store('images', 'public');
      }
-     $formfiedls['image'] = $image->store('images', 'public');
      $customer->fill($formfiedls)->save();
      return redirect()->route('customers.index');
     }
