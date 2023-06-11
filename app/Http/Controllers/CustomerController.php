@@ -20,6 +20,7 @@ class CustomerController extends Controller
     {
            $name = strip_tags($request->name);
            $details = strip_tags($request->details);
+           $image = $request->image;
 
           //  2 actions necessary: validation et insertion
           // 1 validation
