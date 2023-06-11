@@ -51,7 +51,6 @@ class CustomerController extends Controller
     }
     public function update(Request $request, Customer $customer)
     {
-      
      $formfiedls = $request->validate([
        'name' => 'required',
        'details' => 'required',
@@ -61,7 +60,7 @@ class CustomerController extends Controller
       $formfiedls['image'] = $request->file('image')->store('images', 'public');
      }
      $customer->fill($formfiedls)->save();
-     return redirect()->route('customers.index')->with('success', 'ypu have been updated customer successfully.');
+     return redirect()->route('customers.index')->with('success', 'you have been updated customer successfully.');
     }
     public function destroy(Customer $customer)
     {
