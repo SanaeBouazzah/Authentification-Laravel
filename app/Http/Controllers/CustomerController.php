@@ -20,6 +20,7 @@ class CustomerController extends Controller
     {
            $name = strip_tags($request->name);
            $details = strip_tags($request->details);
+           $image = $request->file('image')->store('images', 'public');
 
           //  2 actions necessary: validation et insertion
           // 1 validation
@@ -30,7 +31,6 @@ class CustomerController extends Controller
           ]);
 
           // 2 insertion
-          $image = $request->file('image')->store('images', 'public');
         Customer::create([
           'name' => $name,
           'details' => $details,
@@ -51,15 +51,15 @@ class CustomerController extends Controller
     }
     public function update(Request $request, Customer $customer)
     {
-     $formfiedls = $request->validate([
+     $formfields = $request->validate([
        'name' => 'required',
        'details' => 'required',
        'image' => 'required'
      ]);
      if($request->hasFile('image')){
-      $formfiedls['image'] = $request->file('image')->store('images', 'public');
+      $formfields['image'] = $request->file('image')->store('images', 'public');
      }
-     $customer->fill($formfiedls)->save();
+     $customer->fill($formfields)->save();
      return redirect()->route('customers.index')->with('success', 'you have been updated customer successfully.');
     }
     public function destroy(Customer $customer)
