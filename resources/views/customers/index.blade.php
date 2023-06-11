@@ -54,7 +54,7 @@
 
 
 <div class="container">
-  <div>
+  <div class="my-2">
     @if (session()->has('success'))
         {{session('success')}}
     @endif
