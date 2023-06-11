@@ -61,7 +61,7 @@ class CustomerController extends Controller
       $formfiedls['image'] = $request->file('image')->store('images', 'public');
      }
      $customer->fill($formfiedls)->save();
-     return redirect()->route('customers.index');
+     return redirect()->route('customers.index')->with('success', 'ypu have been updated customer successfully.');
     }
     public function destroy(Customer $customer)
     {
