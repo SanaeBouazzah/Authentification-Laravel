@@ -18,6 +18,15 @@
     <label>details:</label>
      <input type="text" name="details" class="form-control" value="{{$customers['details']}}">
    </div>
+   <div class="mb-3">
+    <label>Image:</label>
+     <input type="file" name="image" class="form-control" value="{{$customers['image']}}">
+     <span class="text-danger">
+      @error('image')
+         {{$message}}
+     @enderror
+     </span>
+   </div>
    <div>
     <input type="submit" value="Save Changes" class="form-control btn btn-dark">
    </div>
