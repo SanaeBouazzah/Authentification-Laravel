@@ -51,13 +51,13 @@ class CustomerController extends Controller
     }
     public function update(Request $request, Customer $customer)
     {
-
+      
      $formfiedls = $request->validate([
        'name' => 'required',
        'details' => 'required',
        'image' => 'required'
      ]);
-     $image = $request->file('image')->store('images', 'public');
+     $image = $request->file('image');
      $customer->fill($formfiedls)->save();
      return redirect()->route('customers.index');
     }
