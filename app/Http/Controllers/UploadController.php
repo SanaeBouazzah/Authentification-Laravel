@@ -9,6 +9,7 @@ class UploadController extends Controller
 {
     public function create()
     {
+      $photos = Upload::all();
         return view('upload.index');
     }
     public function store(Request $request)
