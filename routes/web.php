@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\StaticController;
+use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,4 +21,7 @@ Route::delete('customers/{customer}', [CustomerController::class, 'destroy'])->n
 Route::get('customers/edit/{id}', [CustomerController::class, 'edit'])->name('customers.edit');
 Route::put('customers/{customer}', [CustomerController::class, 'update'])->name('customers.update');
 Route::get('customers/{id}', [CustomerController::class, 'show'])->name('customers.show');
+
+
+Route::get('/upload', [UploadController::class, 'create'])->name('upload.create');
 
