@@ -5,7 +5,7 @@
 @section('content')
 
   <div class="container-fluid my-5">
-    <div class="success">
+    <div class="success my-5">
       @if (session()->has('success'))
           {{session('success')}}
       @endif
