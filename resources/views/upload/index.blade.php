@@ -6,7 +6,8 @@
 
   <div class="container-fluid">
     <form action="{{route('upload.store')}}" method="post" enctype="multipart/form-data">
-      <input type="file" >
+      @csrf
+      <input type="file" name="photo">
     </form>
   </div>
 @endsection
