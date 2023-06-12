@@ -18,8 +18,8 @@ class UploadController extends Controller
       $request->file('photo')->store('public/images');
 
       $photo = new Upload();
-      $request = $request->name;
-      $request = $request->size;
+      $name = $photo->name;
+      $size = $photo->size;
         // dd($request->file());
     }
 }
