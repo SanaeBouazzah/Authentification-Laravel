@@ -17,7 +17,7 @@ class UploadController extends Controller
       $name = $request->file('photo')->getClientOriginalName();
       $request->file('photo')->store('public/images');
 
-      $photo = new Photo();
+      $photo = new Upload();
       $name = $photo->name;
       $size = $photo->size;
       $photo->save();
