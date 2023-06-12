@@ -4,5 +4,9 @@
 @endsection
 @section('content')
 
-upload
+  <div class="container-fluid">
+    <form action="" method="post" enctype="multipart/form-data">
+      <input type="file" >
+    </form>
+  </div>
 @endsection
