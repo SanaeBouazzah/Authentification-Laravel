@@ -5,7 +5,7 @@
 @section('content')
 
   <div class="container-fluid">
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="{{route('upload.store')}}" method="post" enctype="multipart/form-data">
       <input type="file" >
     </form>
   </div>
