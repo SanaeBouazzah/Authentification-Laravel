@@ -24,4 +24,5 @@ Route::get('customers/{id}', [CustomerController::class, 'show'])->name('custome
 
 
 Route::get('/upload', [UploadController::class, 'create'])->name('upload.index');
+Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
 
