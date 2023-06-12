@@ -22,6 +22,6 @@ class UploadController extends Controller
       $photo->size = $size;
       $photo->save();
     
-      return redirect()->back();
+      return redirect()->back()->with('success', 'you have added image successfully.');
     }
 }
