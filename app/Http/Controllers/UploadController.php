@@ -15,12 +15,11 @@ class UploadController extends Controller
     {
       $size = $request->file('photo')->getSize();
       $name = $request->file('photo')->getClientOriginalName();
-      $path = $request->file('photo')->store('public/images');
+      $request->file('photo')->store('public/images');
     
       $photo = new Upload();
       $photo->name = $name;
       $photo->size = $size;
-      $photo->path = $path;
       $photo->save();
     
       return redirect()->back();
