@@ -13,7 +13,8 @@ class UploadController extends Controller
     }
     public function store(Request $request)
     {
-      $name = $request->file();
+      $name = $request->file()->getClientOriginalName();
+      return $name;
         // dd($request->file());
     }
 }
