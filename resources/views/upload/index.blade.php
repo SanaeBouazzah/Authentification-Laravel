@@ -20,8 +20,8 @@
     <br>
     <div>
       <ul>
-        @foreach ($photos as $item)
-            
+        @foreach ($photos as $photo)
+            <li>{{$photo->name}} <img src="" alt=""></li>
         @endforeach
       </ul>
     </div>
