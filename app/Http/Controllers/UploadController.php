@@ -10,7 +10,7 @@ class UploadController extends Controller
     public function create()
     {
       $photos = Upload::all();
-        return view('upload.index');
+        return view('upload.index', compact('photos'));
     }
     public function store(Request $request)
     {
