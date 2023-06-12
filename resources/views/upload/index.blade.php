@@ -21,7 +21,7 @@
     <div>
       <ul>
         @foreach ($photos as $photo)
-            <li>{{$photo->name}} <img src="" alt=""></li>
+            <li>{{$photo->name}} <img src="{{asset('storage/public/images/'. $photo->name)}}" alt=""></li>
         @endforeach
       </ul>
     </div>
