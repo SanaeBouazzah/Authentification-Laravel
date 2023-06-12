@@ -20,6 +20,8 @@ class UploadController extends Controller
       $photo = new Upload();
       $name = $photo->name;
       $size = $photo->size;
-        // dd($request->file());
+      $photo->save();
+
+      return redirect()->back();
     }
 }
