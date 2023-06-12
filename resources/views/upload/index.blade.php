@@ -15,5 +15,15 @@
       <input type="file" name="photo">
       <input type="submit" value="submit">
     </form>
+
+    <hr>
+    <br>
+    <div>
+      <ul>
+        @foreach ($photos as $item)
+            
+        @endforeach
+      </ul>
+    </div>
   </div>
 @endsection
