@@ -14,6 +14,9 @@ class UploadController extends Controller
     }
     public function store(Request $request)
     {
+      if($request->has('photo')){
+        $file = $request->photo;
+      }
       $size = $request->file('photo')->getSize();
       $name = $request->file('photo')->getClientOriginalName();
       $request->file('photo')->store('public/images');
