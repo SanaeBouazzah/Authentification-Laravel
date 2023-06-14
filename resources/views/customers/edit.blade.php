@@ -20,7 +20,11 @@
    </div>
    <div class="mb-3">
     <label>Image:</label>
+<<<<<<< HEAD
      <input type="file" name="image" class="form-control" ><br/>
+=======
+     <input type="file" name="image" class="form-control" value="{{$customers['image']}}">
+>>>>>>> f4f0dce881b1782fb15e921c127f31cb45b52267
      <span class="text-danger">
       @error('image')
          {{$message}}

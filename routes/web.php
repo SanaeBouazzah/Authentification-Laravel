@@ -23,4 +23,9 @@ Route::put('customers/{customer}', [CustomerController::class, 'update'])->name(
 Route::get('customers/{id}', [CustomerController::class, 'show'])->name('customers.show');
 
 
+<<<<<<< HEAD
+=======
+Route::get('/upload', [UploadController::class, 'create'])->name('upload.index');
+Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
+>>>>>>> f4f0dce881b1782fb15e921c127f31cb45b52267
 
