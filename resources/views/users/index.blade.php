@@ -10,7 +10,7 @@
     @csrf
     <div class="my-2">
       <label for="user">Username or Email :</label>
-      <input type="text" name="user" id="user" class="form-control">
+      <input type="email" name="user" id="user" class="form-control">
       @error('user')
           <span class="text-danger">{{$message}}</span>
       @enderror
