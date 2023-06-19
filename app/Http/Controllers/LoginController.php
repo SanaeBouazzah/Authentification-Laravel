@@ -14,5 +14,7 @@ class LoginController extends Controller
         'user' => 'required',
         'password' => 'required',
       ])->validate();
+
+      if(auth())
     }
 }
