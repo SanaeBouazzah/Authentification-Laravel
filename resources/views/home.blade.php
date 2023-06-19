@@ -4,6 +4,11 @@
 @endsection
 @section('content')
 <div class="container">
-  <h2>Home</h2>
+  <div class="success my-5">
+    @if (session()->has('success'))
+        <span class="alert alert-success form-control" role="alert"> {{session('success')}}</span>
+    @endif
+  </div>
+  <h2>Home</h2>  
 </div>
 @endsection
