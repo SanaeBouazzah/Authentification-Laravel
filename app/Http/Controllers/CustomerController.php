@@ -21,7 +21,6 @@ class CustomerController extends Controller
            $name = strip_tags($request->name);
            $details = strip_tags($request->details);
            $image = $request->file('image')->store('images', 'public');
-
           $request->validate([
             'name' => 'required',
             'details' => 'required',
