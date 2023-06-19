@@ -10,6 +10,9 @@ class LoginController extends Controller
       return view('users.index');
     }
     public function storedata(){
-      return view('users.index');
+      validator(request()->all(), [
+        'email' => 'required',
+        'password' => 'required',
+      ]);
     }
 }
