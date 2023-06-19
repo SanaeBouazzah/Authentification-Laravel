@@ -21,6 +21,9 @@
                       <div class="form-outline flex-fill mb-0">
                         <input type="text" id="name" class="form-control" name="name"/>
                         <label class="form-label" for="name">Your Name</label>
+                        @error('name')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                       </div>
                     </div>
   
@@ -29,6 +32,9 @@
                       <div class="form-outline flex-fill mb-0">
                         <input type="email" id="email" class="form-control" name="email"/>
                         <label class="form-label" for="email">Your Email</label>
+                        @error('email')
+                        <span class="text-danger">{{$message}}</span>
+                       @enderror
                       </div>
                     </div>
   
@@ -37,6 +43,9 @@
                       <div class="form-outline flex-fill mb-0">
                         <input type="password" id="password" class="form-control"  name="password"/>
                         <label class="form-label" for="password">Password</label>
+                        @error('password')
+                        <span class="text-danger">{{$message}}</span>
+                       @enderror
                       </div>
                     </div>
   
