@@ -16,10 +16,6 @@
         <a href="{{route('about')}}" class="text-white">About</a>
         <a href="{{route('customers.index')}}" class="text-white">Customers</a>
         <a href="{{route('contact')}}" class="text-white">Contact</a>
-<<<<<<< HEAD
-=======
-        <a href="{{route('upload.index')}}" class="text-white">Upload</a>
->>>>>>> f4f0dce881b1782fb15e921c127f31cb45b52267
       </nav>
 
       @yield('content')
