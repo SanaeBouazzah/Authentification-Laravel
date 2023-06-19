@@ -52,31 +52,19 @@ class CustomerController extends Controller
       $formfields = $request->validate([
         'name' => 'required',
         'details' => 'required',
-<<<<<<< HEAD
         'image' => 'required'
-       ]);
+         ]);
 
-       if ($request->hasFile('image')) {
-        $formfields['image'] = $request->file('image')->store('images','public');
-    }
+         if ($request->hasFile('image')) {
+              $formfields['image'] = $request->file('image')->store('images','public');
+         }
       $customer->fill($formfields)->save();
       return redirect()->route('customers.index')->with('success', 'You have updated the customer successfully.');
-=======
-        'image' => 'required | image'
-    ]);
-
-    if ($request->hasFile('image')) {
-        $formfields['image'] = $request->file('image')->store('images', 'public');
-    }
-
-    $customer->fill($formfields)->save();
-
     }
     public function destroy(Customer $customer)
     {
         $customers = Customer::all();
         $customer->delete();
-<<<<<<< HEAD
         return redirect()->route('customers.index', compact('customers'))->with('success', 'you have been deleted customer successfully.');
     }
     private function uploadimage(Request $request){
@@ -85,6 +73,3 @@ class CustomerController extends Controller
        }
     }
 }
-=======
-        return redirect()->route('customers.index', compact('customers'));
-    }
