@@ -15,6 +15,8 @@ class LoginController extends Controller
         'password' => 'required',
       ])->validate();
 
-      if(auth()->attempt(request()->only(['email','password'])))
+      if(auth()->attempt(request()->only(['email','password{']))){
+        return redirect()->route('customers.index');
+      }
     }
 }
