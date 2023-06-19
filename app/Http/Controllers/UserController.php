@@ -15,7 +15,7 @@ class LoginController extends Controller
         'password' => 'required',
       ]);
 
-      User::
+      User::create($data);
       return redirect()->route('customers.index');
     }
 }

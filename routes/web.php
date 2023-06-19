@@ -30,6 +30,6 @@ Route::post('/upload', [UploadController::class, 'store'])->name('upload.store')
 
 
 ///Login Page and Sign Up
-Route::get('/login', [LoginController::class, 'index'])->name('users.index');
-Route::post('/login', [LoginController::class, 'storedata'])->name('users.login');
+Route::get('/login', [UserController::class, 'index'])->name('users.index');
+Route::post('/login', [UserController::class, 'storedata'])->name('users.login');
 
