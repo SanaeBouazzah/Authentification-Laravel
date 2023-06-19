@@ -10,14 +10,12 @@ class LoginController extends Controller
       return view('users.index');
     }
     public function storedata(){
-      validator(request()->all(), [
+      $data = $request->validate([
         'user' => 'required',
         'password' => 'required',
-      ])->validate();
+      ]);
 
-      if(auth()->attempt(request()->only(['user','password']))){
-        return redirect()->route('users.index')->with('success', 'you are logged in');
-      }
+      User::
       return redirect()->route('customers.index');
     }
 }
