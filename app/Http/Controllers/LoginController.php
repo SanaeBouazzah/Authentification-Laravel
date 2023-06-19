@@ -16,7 +16,8 @@ class LoginController extends Controller
       ])->validate();
 
       if(auth()->attempt(request()->only(['email','password{']))){
-        return redirect()->route('customers.index');
+        return redirect()->route('users.index');
       }
+      return redirect()->back();
     }
 }
