@@ -41,7 +41,7 @@
                     </div>
   
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button type="button" class="btn btn-primary btn-lg">Sign Up</button>
+                      <button type="button" class="btn btn-primary btn-lg px-5 rounded-0">Sign Up</button>
                     </div>
   
                   </form>
