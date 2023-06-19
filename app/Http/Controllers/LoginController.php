@@ -15,6 +15,6 @@ class LoginController extends Controller
         'password' => 'required',
       ])->validate();
 
-      if(auth())
+      if(auth()->attempt(request()->only(['email','password'])))
     }
 }
