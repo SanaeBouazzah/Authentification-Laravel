@@ -9,6 +9,11 @@
         <span class="alert alert-success form-control" role="alert"> {{session('success')}}</span>
     @endif
   </div>
-  <h2>Home</h2>  
+
+
+  
+  <div  class="mx-auto w-2">
+    <h2>Home</h2>  
+  </div>
 </div>
 @endsection
