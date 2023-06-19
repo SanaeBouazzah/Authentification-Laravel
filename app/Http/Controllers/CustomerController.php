@@ -26,25 +26,14 @@ class CustomerController extends Controller
             'details' => 'required',
             'image' => 'required|image|mimes:svg,png,jpg,jpeg|max:10240'
           ]);
-          
           if ($request->hasFile('image')) {
             $formfields['image'] =  $request->file('image')->store('images', 'public');
-        }
-=======
-            'image' => 'required|image'
-          ]);
->>>>>>> f4f0dce881b1782fb15e921c127f31cb45b52267
-
-          // 2 insertion
-        Customer::create([
-          'name' => $name,
-          'details' => $details,
-<<<<<<< HEAD
-          'image' => $formfields['image'],
-=======
-          'image' => $image,
->>>>>>> f4f0dce881b1782fb15e921c127f31cb45b52267
-        ]);
+          }
+          Customer::create([
+            'name' => $name,
+            'details' => $details,
+             'image' => $formfields['image'],
+           ]);
            
           return redirect()->route('customers.index')->with('success', 'you have added a customer successfully.');
     }
@@ -82,8 +71,6 @@ class CustomerController extends Controller
 
     $customer->fill($formfields)->save();
 
-    return redirect()->route('customers.index')->with('success', 'You have updated the customer successfully.');
->>>>>>> f4f0dce881b1782fb15e921c127f31cb45b52267
     }
     public function destroy(Customer $customer)
     {
@@ -101,5 +88,3 @@ class CustomerController extends Controller
 =======
         return redirect()->route('customers.index', compact('customers'));
     }
-}
->>>>>>> f4f0dce881b1782fb15e921c127f31cb45b52267
