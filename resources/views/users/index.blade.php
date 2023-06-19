@@ -11,6 +11,9 @@
     <div class="my-2">
       <label for="user">Username or Email :</label>
       <input type="text" name="user" id="user" class="form-control">
+      @error('user')
+          {{$message}}
+      @enderror
     </div>
     <div class="my-2">
       <label for="password">Password :</label>
