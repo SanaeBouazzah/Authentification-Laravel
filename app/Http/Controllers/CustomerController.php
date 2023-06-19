@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CustomerRequest;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,7 @@ class CustomerController extends Controller
     {
       //
     }
-    public function store(Request $request)
+    public function store(CustomerRequest $request)
     {
            $name = strip_tags($request->name);
            $details = strip_tags($request->details);
@@ -43,7 +44,7 @@ class CustomerController extends Controller
       $customers = Customer::find($id);
       return view('customers.edit', compact('customers'));
     }
-    public function update(Request $request, Customer $customer)
+    public function update(CustomerRequest $request, Customer $customer)
     {
       $formfields = $request->validated();
 
