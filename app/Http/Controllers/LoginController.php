@@ -9,4 +9,7 @@ class LoginController extends Controller
     public function index(){
       return view('users.index');
     }
+    public function storedata(){
+      return view('users.index');
+    }
 }
