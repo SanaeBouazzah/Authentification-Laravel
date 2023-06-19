@@ -10,10 +10,7 @@
     <li>{{$customer->id}}</li>
     <li>{{$customer->name}}</li>
     <li>{{$customer->details}}</li>
-<<<<<<< HEAD
     <li><img src="/storage/{{$customer->image}}" alt=""></li>
-=======
->>>>>>> f4f0dce881b1782fb15e921c127f31cb45b52267
   </ul>
   </div>
 </div>
