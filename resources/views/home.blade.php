@@ -11,8 +11,8 @@
   </div>
 
 
-  
-  <div  class="mx-auto w-2">
+
+  <div  class="mx-auto w-25">
     <h2>Home</h2>  
   </div>
 </div>
