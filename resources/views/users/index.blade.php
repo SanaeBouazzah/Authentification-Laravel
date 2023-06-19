@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('title')
-  Login
+  Sign Up
 @endsection
 @section('content')
 
