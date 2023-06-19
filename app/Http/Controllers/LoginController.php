@@ -13,6 +13,6 @@ class LoginController extends Controller
       validator(request()->all(), [
         'user' => 'required',
         'password' => 'required',
-      ]);
+      ])->validate();
     }
 }
