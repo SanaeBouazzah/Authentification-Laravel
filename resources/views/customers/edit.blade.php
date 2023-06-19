@@ -21,7 +21,6 @@
    <div class="mb-3">
     <label>Image:</label>
      <input type="file" name="image" class="form-control" ><br/>
-     <input type="file" name="image" class="form-control" value="{{$customers['image']}}">
      <span class="text-danger">
       @error('image')
          {{$message}}
