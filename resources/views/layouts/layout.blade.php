@@ -17,7 +17,7 @@
         <a href="{{route('customers.index')}}" class="text-white">Customers</a>
         <a href="{{route('contact')}}" class="text-white">Contact</a>
         <a href="" class="text-white">Log In</a>
-        <a href="" class="text-dark btn btn-primary">Sign Up</a>
+        <a href="" class="text-white">Sign Up</a>
       </nav>
 
       @yield('content')
