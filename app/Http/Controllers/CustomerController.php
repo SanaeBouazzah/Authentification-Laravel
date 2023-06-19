@@ -45,11 +45,7 @@ class CustomerController extends Controller
     }
     public function update(Request $request, Customer $customer)
     {
-      $formfields = $request->validate([
-        'name' => 'required',
-        'details' => 'required',
-        'image' => 'required'
-         ]);
+      $formfields = $request->validated();
 
          if ($request->hasFile('image')) {
               $formfields['image'] = $request->file('image')->store('images','public');
