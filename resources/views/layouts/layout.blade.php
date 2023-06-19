@@ -16,8 +16,8 @@
         <a href="{{route('about')}}" class="text-white">About</a>
         <a href="{{route('customers.index')}}" class="text-white">Customers</a>
         <a href="{{route('contact')}}" class="text-white">Contact</a>
-        <a href="{{route('users.index')}}" class="text-white">Log In</a>
-        <a href="" class="text-white">Sign Up</a>
+        <a href="{{route('users.index')}}" class="text-white">Sign Up</a>
+        <a href="" class="text-white">Log In</a>
       </nav>
 
       @yield('content')
