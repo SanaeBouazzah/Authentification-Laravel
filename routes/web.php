@@ -29,7 +29,13 @@ Route::get('/upload', [UploadController::class, 'create'])->name('upload.index')
 Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
 
 
-///Login Page and Sign Up
+///Login Page and Sign Up and logout
 Route::get('/signup', [UserController::class, 'index'])->name('users.index');
 Route::post('/signup', [UserController::class, 'storedata'])->name('users.signup');
+
+
+Route::get('/login', [UserController::class, 'login'])->name('users.login');
+Route::post('/login', [UserController::class, 'check'])->name('users.check');
+
+Route::get('/logout', [UserController::class, 'logout'])->name('users.logout');
 

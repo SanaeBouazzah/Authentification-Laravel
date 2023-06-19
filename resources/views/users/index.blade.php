@@ -50,7 +50,7 @@
                     </div>
   
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <input type="submit" class="btn btn-primary btn-lg px-5 rounded-0" value="Sign Up">
+                      <input type="submit" class="btn btn-dark  px-5 rounded-0" value="Sign Up">
                     </div>
   
                   </form>

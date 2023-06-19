@@ -54,9 +54,9 @@
 
 
 <div class="container">
-  <div class="my-2">
+  <div class="my-4 py-3">
     @if (session()->has('success'))
-        {{session('success')}}
+        <span class="alert alert-success form-control" role="alert">{{session('success')}}</span>
     @endif
   </div>
   <div class=" my-4">
@@ -104,12 +104,11 @@
 </div>
 
 @endsection
-
 <script>
   const myModal = document.getElementById('myModal')
-  const myInput = document.getElementById('myInput')
+const myInput = document.getElementById('myInput')
 
-  myModal.addEventListener('shown.bs.modal', () => {
+myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
-  })
+})
 </script>
