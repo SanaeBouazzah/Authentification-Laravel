@@ -9,15 +9,15 @@ class LoginController extends Controller
     public function index(){
       return view('users.index');
     }
-    public function storedata(Request $request){
+    public function storedata(){
       validator(request()->all(), [
         'user' => 'required',
         'password' => 'required',
       ])->validate();
 
-      if(auth()->attempt(request()->only(['email','password{']))){
-        return redirect()->route('users.index');
+      if(auth()->attempt(request()->only(['email','password']))){
+        return redirect()->route('users.index')->with('success', 'you are logged in');
       }
-      return redirect()->back()->with('success', 'you are logged in');
+      return redirect()->route('customers.index');
     }
 }
