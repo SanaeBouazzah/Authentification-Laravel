@@ -18,6 +18,6 @@ class LoginController extends Controller
       if(auth()->attempt(request()->only(['email','password{']))){
         return redirect()->route('users.index');
       }
-      return redirect()->back();
+      return redirect()->back()->with('success', 'you are logged in');
     }
 }

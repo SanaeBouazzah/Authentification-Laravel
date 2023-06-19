@@ -6,7 +6,7 @@
 
 
 
-<form action="" method="post" class="w-50 p-4 shadow-lg mx-auto my-5">
+<form action="{{route('users.login')}}" method="post" class="w-50 p-4 shadow-lg mx-auto my-5">
     @csrf
     <div class="my-2">
       <label for="user">Username or Email :</label>
