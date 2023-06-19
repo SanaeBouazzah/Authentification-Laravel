@@ -11,7 +11,7 @@ class LoginController extends Controller
     }
     public function storedata(Request $request){
       validator(request()->all(), [
-        'email' => 'required',
+        'user' => 'required',
         'password' => 'required',
       ]);
     }
