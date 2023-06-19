@@ -9,9 +9,16 @@
 <form action="{{route('users.login')}}" method="post" class="w-50 p-4 shadow-lg mx-auto my-5">
     @csrf
     <div class="my-2">
-      <label for="user">Username or Email :</label>
-      <input type="email" name="user" id="user" class="form-control">
-      @error('user')
+      <label for="name">Username:</label>
+      <input type="text" name="name" id="name" class="form-control">
+      @error('name')
+          <span class="text-danger">{{$message}}</span>
+      @enderror
+    </div>
+    <div class="my-2">
+      <label for="email">Email Address:</label>
+      <input type="email" name="email" id="email" class="form-control">
+      @error('email')
           <span class="text-danger">{{$message}}</span>
       @enderror
     </div>
