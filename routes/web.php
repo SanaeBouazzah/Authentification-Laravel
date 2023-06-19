@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StaticController;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
@@ -26,4 +27,8 @@ Route::get('customers/{id}', [CustomerController::class, 'show'])->name('custome
 
 Route::get('/upload', [UploadController::class, 'create'])->name('upload.index');
 Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
+
+
+///Login Page and Sign Up
+Route::get('/', [LoginController::class, 'index'])->name('users.index');
 
