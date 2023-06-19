@@ -9,7 +9,7 @@ class LoginController extends Controller
     public function index(){
       return view('users.index');
     }
-    public function storedata(){
+    public function storedata(Request $request){
       validator(request()->all(), [
         'email' => 'required',
         'password' => 'required',
