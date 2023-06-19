@@ -12,14 +12,14 @@
       <label for="user">Username or Email :</label>
       <input type="text" name="user" id="user" class="form-control">
       @error('user')
-          {{$message}}
+          <span class="text-danger">{{$message}}</span>
       @enderror
     </div>
     <div class="my-2">
       <label for="password">Password :</label>
       <input type="password" name="password" id="password" class="form-control">
       @error('password')
-          {{$message}}
+        <span class="text-danger">{{$message}}</span>
       @enderror
     </div>
     <div>
