@@ -9,7 +9,7 @@ class UserController extends Controller
     public function index(){
       return view('users.index');
     }
-    public function storedata(){
+    public function storedata(Request $request){
       $data = $request->validate([
         'user' => 'required',
         'password' => 'required',
