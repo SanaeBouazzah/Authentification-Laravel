@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\StaticController;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
