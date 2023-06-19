@@ -20,4 +20,7 @@ class UserController extends Controller
       User::create($data);
       return redirect()->route('home')->with('success', 'you are logged in!!!!!!!!!');
     }
+    public function login(){
+      
+    }
 }
