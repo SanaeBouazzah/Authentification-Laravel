@@ -21,11 +21,7 @@ class CustomerController extends Controller
            $name = strip_tags($request->name);
            $details = strip_tags($request->details);
            $image = $request->file('image')->store('images', 'public');
-          $request->validate([
-            'name' => 'required',
-            'details' => 'required',
-            'image' => 'required|image|mimes:svg,png,jpg,jpeg|max:10240'
-          ]);
+          $request->validated();
           if ($request->hasFile('image')) {
             $formfields['image'] =  $request->file('image')->store('images', 'public');
           }
