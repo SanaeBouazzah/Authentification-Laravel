@@ -18,6 +18,9 @@
     <div class="my-2">
       <label for="password">Password :</label>
       <input type="password" name="password" id="password" class="form-control">
+      @error('password')
+          {{$message}}
+      @enderror
     </div>
     <div>
       <input type="submit" value="Log In" class="form-control mt-3 btn btn-dark">
