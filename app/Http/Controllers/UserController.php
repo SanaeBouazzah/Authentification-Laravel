@@ -17,6 +17,6 @@ class UserController extends Controller
       ]);
 
       User::create($data);
-      return redirect()->route('customers.index')->with('success', 'you are logged in!!!!!!!!!');
+      return redirect()->route('home')->with('success', 'you are logged in!!!!!!!!!');
     }
 }
