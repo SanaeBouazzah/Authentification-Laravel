@@ -24,7 +24,7 @@ class CustomerRequest extends FormRequest
         return [
           'name' => 'required',
           'details' => 'required',
-          'image' => 'required|image|mimes:svg,png,jpg,jpeg|max:10240'
+          'image' => 'required|image|mimes:svg,png,jpg,jpeg'
         ];
     }
 }
