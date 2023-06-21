@@ -48,9 +48,7 @@ class CustomerController extends Controller
     {
       $formfields = $request->validated();
 
-         if ($request->hasFile('image')) {
-              $formfields['image'] = $request->file('image')->store('images','public');
-         }
+      $formfields['image'] = $this->uploadImage($request);
       $customer->fill($formfields)->save();
       return redirect()->route('customers.index')->with('success', 'You have updated the customer successfully.');
     }
