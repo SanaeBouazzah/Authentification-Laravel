@@ -60,9 +60,9 @@ class CustomerController extends Controller
         $customer->delete();
         return redirect()->route('customers.index', compact('customers'))->with('success', 'you have been deleted customer successfully.');
     }
-    private function uploadimage(Request $request){
-      if ($request->hasFile('image')) {
-        return  $request->file('image')->store('images', 'public');
-       }
+    public function uploadImage(Request $request){
+      if($request->hasFile('image')){
+        return $request->file('image')->store('images', 'public');
+      }
     }
 }
