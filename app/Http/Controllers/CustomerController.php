@@ -19,16 +19,9 @@ class CustomerController extends Controller
     }
     public function store(CustomerRequest $request)
     {
-           $name = strip_tags($request->name);
-           $details = strip_tags($request->details);
-           $image = $request->file('image')->store('images', 'public');
-          $request->validated();
+           $formfields = $request->validated();
           $formfields['image'] = $this->uploadImage($request);
-          Customer::create([
-            'name' => $name,
-            'details' => $details,
-             'image' => $formfields['image'],
-           ]);
+          Customer::create($formfields);
            
           return redirect()->route('customers.index')->with('success', 'you have added a customer successfully.');
     }
