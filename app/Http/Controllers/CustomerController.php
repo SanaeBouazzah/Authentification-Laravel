@@ -23,9 +23,7 @@ class CustomerController extends Controller
            $details = strip_tags($request->details);
            $image = $request->file('image')->store('images', 'public');
           $request->validated();
-          if ($request->hasFile('image')) {
-            $formfields['image'] =  $request->file('image')->store('images', 'public');
-          }
+          $formfields['image'] = $this->uploadImage($request);
           Customer::create([
             'name' => $name,
             'details' => $details,
